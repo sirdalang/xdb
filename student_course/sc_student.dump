@@ -1,0 +1,18 @@
+
+-- table student
+
+DROP TABLE IF EXISTS `student`;
+
+CREATE TABLE `student` (
+  `sno` char(9) PRIMARY KEY,
+  `sname` char(20),
+  `ssex` char(2),
+  `sage` smallint(6),
+  `sdept` char(20)
+);
+
+INSERT INTO `student` VALUES 
+('201215121','李勇','男',20,'CS'),
+('201215122','刘晨','女',19,'CS'),
+('201215123','王敏','女',18,'MA'),
+('201215125','张立','男',19,'IS');

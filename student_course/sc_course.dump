@@ -1,0 +1,23 @@
+
+-- table course
+
+DROP TABLE IF EXISTS `course`;
+
+CREATE TABLE `course` (
+  `cno` char(4) PRIMARY KEY,
+  `cname` char(40),
+  `cpno` char(4),
+  `ccredit` smallint(6)
+);
+
+INSERT INTO `course` VALUES 
+('1','数据库','5',4),
+('2','数学',NULL,2),
+('3','信息系统','6',4),
+('4','操作系统','6',3),
+('5','数据结构','7',4),
+('6','数据处理',NULL,2),
+('7','PASCAL 语言','6',4);
+
+-- for convience --
+ALTER TABLE `course` ADD FOREIGN KEY (`cpno`) REFERENCES `course` (`cno`);
